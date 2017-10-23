@@ -47,13 +47,12 @@ public class Menu {
 
 		img = null;
 		try {
-			img = ImageIO.read(new File("images/background.jpg"));
+			img = ImageIO.read(new File("images/wavesbackground.jpg"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		handler.addObject(new MenuFireworks((r.nextInt(Game.WIDTH) - 25), 500, 50, 50, 0, -2,
-				colorPick.get(r.nextInt(6)), ID.Firework, this.handler));
+		
 	}
 
 	public void addColors() {
@@ -71,8 +70,6 @@ public class Menu {
 		if (timer <= 0) {
 			handler.object.clear();
 			colorIndex = r.nextInt(6);
-			handler.addObject(new MenuFireworks((r.nextInt(Game.WIDTH) - 25), 1080, 100, 100, 0, -4,
-					colorPick.get(colorIndex), ID.Firework, this.handler));
 			timer = 300;
 		}
 		handler.tick();
@@ -87,35 +84,18 @@ public class Menu {
 
 			g.setFont(font);
 			g.setColor(Color.white);
-			g.drawString("Game Modes", 1140, 100);
+			g.drawString("A Team B2 Production", 1140, 100);
 
 			g.setFont(font);
 			g.setColor(Color.white);
-			g.drawString("Loehle's Sandbox", 75, 100);
+			g.drawString("WAVES", 75, 100);
 
 			g.setColor(Color.white);
 			g.drawRect(990, 135, 400, 400);
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Waves", 1110, 215);
+			g.drawString("Play", 1110, 215);
 
-			g.setColor(Color.white);
-			g.drawRect(1440, 135, 400, 400);
-			g.setFont(font2);
-			g.setColor(Color.white);
-			g.drawString("Bosses", 1550, 215);
-
-			g.setColor(Color.white);
-			g.drawRect(990, 585, 400, 400);
-			g.setFont(font2);
-			g.setColor(Color.white);
-			g.drawString("Attack", 1095, 665);
-
-			g.setColor(Color.white);
-			g.drawRect(1440, 585, 400, 400);
-			g.setFont(font2);
-			g.setColor(Color.white);
-			g.drawString("Hunger", 1550, 665);
 
 			g.setColor(Color.white);
 			g.drawRect(80, 135, 850, 250);
